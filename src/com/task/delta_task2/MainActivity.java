@@ -29,7 +29,7 @@ public class MainActivity extends ActionBarActivity {
 	private ArrayAdapter<String> adapter;
 	private long starttime=0;
 	long millisec=0,timeswapbuff=0,updatedtime=0;
-	int mins,secs,millisecs,id=1;
+	int mins,secs,msecs,id=1;
 	Handler handler = new Handler();
 
     @Override
@@ -57,7 +57,7 @@ public class MainActivity extends ActionBarActivity {
 		adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listitems);
         reset.setOnClickListener(new OnClickListener(){
 			public void onClick(View view){
-				timeswapbuff=0;
+			timeswapbuff=0;
         		handler.removeCallbacks(updatetimerthread);
         		String s=(String) timervalue.getText();
         		listitems.add(id+++" ) "+s);	
@@ -74,8 +74,8 @@ public class MainActivity extends ActionBarActivity {
     		secs=(int)(updatedtime/1000);
     		mins=secs/60;
     		secs=secs%60;
-    		millisecs=(int)(updatedtime%1000);
-    		timervalue.setText(String.format("%02d",mins)+":"+String.format("%02d", secs)+ "."+ String.format("%03d", millisecs));
+    		msecs=(int)(updatedtime%1000);
+    		timervalue.setText(String.format("%02d",mins)+":"+String.format("%02d", secs)+ "."+ String.format("%03d", msecs));
     		handler.postDelayed(this, 0);
     	}
     };
