@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Delta_task2</string>
+    <string name="hello_world">00:00.000</string>
+    <string name="action_settings">Settings</string>
+    <string name="button0">start</string>
+    <string name="button1">pause</string>
+    <string name="button2">reset</string>
+
+</resources>
